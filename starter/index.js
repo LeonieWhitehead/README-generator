@@ -60,18 +60,8 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            reject(err);
-            return;
-        }
-        resolve({
-            ok: true,
-            message: 'File created!'
-        });
-    });
-});
+    const markdown = generateMarkdown(data);
+    fs.writeFileSync(path.join(process.cwd(), fileName), markdown);
 }
 
 // function to initialize program
