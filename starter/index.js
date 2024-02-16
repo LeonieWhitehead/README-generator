@@ -12,11 +12,8 @@ const questions = [
     validate: titleInput => {
         if (titleInput) {
             return true;
-        } else {
-            console.log('Please enter a title for your project.');
-            return false;
-        }
     }
+}
 },
 {
   type: 'input',
@@ -63,6 +60,18 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            reject(err);
+            return;
+        }
+        resolve({
+            ok: true,
+            message: 'File created!'
+        });
+    });
+});
 }
 
 // function to initialize program
