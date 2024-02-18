@@ -70,7 +70,6 @@ function init() {
   .prompt(questions)
   .then((data) => {
       writeToFile('README.md', data);
-      console.log('Successfully created README.md!');
   })
   .catch((err) => {
       console.error(err);
