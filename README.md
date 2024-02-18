@@ -26,6 +26,9 @@ To generate a README file, run the following command:
 - node index.js
 - Answer the prompted questions to provide information about your project, and the application will generate a professional README.md file in the project's root directory.
 
+## Walkthrough video
+[Walkthrough Video](https://drive.google.com/file/d/17rUbO1R55u0pci_eXkajE8nzbOJ84l4v/view)
+
 ## License
 This project is licensed under the MIT license.
 
